@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: MyString
+  food: one
+  recipe: one
+
+two:
+  quantity: MyString
+  food: two
+  recipe: two
