@@ -1,1 +1,1 @@
-json.partial! "inventories/inventory", inventory: @inventory
+json.partial! 'inventories/inventory', inventory: @inventory
