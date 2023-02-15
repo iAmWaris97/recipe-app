@@ -1,1 +1,21 @@
 <h1>Public recipes</h1>
+<%@public_recipes.each do |public_recipe|%>
+<div>
+<p>
+    <strong><%= public_recipe.name %></strong>
+    
+  </p>
+
+<p>Total food items:<%=public_recipe.recipe_foods.length%></p>
+<%sum=public_recipe.recipe_foods.reduce(0) { |sum, recipe_food| sum + recipe_food.food.price.to_s.to_d*recipe_food.quantity.to_s.to_d }%>
+<p>Total price:<%=sum%></p>
+</div>
+
+<p>
+    <strong>by</strong>
+    <%= public_recipe.user.name %>
+  </p>
+  <p>
+      <%= link_to "Recipe details", public_recipe %>
+    </p>
+<%end%>
