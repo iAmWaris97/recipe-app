@@ -3,9 +3,18 @@
 <%= render @recipe %>
 
 <div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
+<div>
   <%= link_to "Generate shopping list", generate_shopping_path(id:@recipe)  %>
    <%= link_to "Add ingredient", new_recipe_food_path %>
+  </div>
+
+   <ul>
+  <%@recipe.recipe_foods.each do |food|%>
+  <%= render food if food != nil %>
+  <%end%>
+  </ul>
+<div>
+  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+  <%= link_to "Back to recipes", recipes_path %>
+</div>
 </div>
