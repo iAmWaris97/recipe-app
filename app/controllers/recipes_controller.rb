@@ -57,8 +57,8 @@ class RecipesController < ApplicationController
   end
 
   def public; end
-
   def generate_shopping; end
+
 
   private
 
