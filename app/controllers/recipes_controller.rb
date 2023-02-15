@@ -59,7 +59,6 @@ class RecipesController < ApplicationController
   def public; end
   def generate_shopping; end
 
-
   private
 
   # Use callbacks to share common setup or constraints between actions.
