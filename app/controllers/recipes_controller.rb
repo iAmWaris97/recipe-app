@@ -57,8 +57,9 @@ class RecipesController < ApplicationController
   end
 
   def public
-    @public_recipes =Recipe.where(public:true)
+    @public_recipes = Recipe.where(public: true)
   end
+
   def generate_shopping
     @general_shopping = Recipe.find(params[:id])
   end
