@@ -17,14 +17,24 @@
   </div>
 
   <div>
-    <%= form.label :food_id, style: "display: block" %>
-    <%= form.text_field :food_id %>
+  <%arr = []%>
+  <%dropdown_recipes.each do |recipe|%>
+    
+    <%arr<<[recipe.name, recipe.id]%>
+  <%end%>
+  <%= form.select :recipe_id, arr %>
+
   </div>
 
   <div>
-    <%= form.label :recipe_id, style: "display: block" %>
-    <%= form.text_field :recipe_id %>
+  <%arr = []%>
+  <%dropdown_foods.each do |food|%>
+    
+    <%arr<<[food.name, food.id]%>
+  <%end%>
+    <%= form.select :food_id, arr %>
   </div>
+
 
   <div>
     <%= form.submit %>
