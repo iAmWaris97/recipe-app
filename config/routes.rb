@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index] do
   end
   resources :inventories
+  get "/public_recipes", to: "recipes#public", as: :public_recipes
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
