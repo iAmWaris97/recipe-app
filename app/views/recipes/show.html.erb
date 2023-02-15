@@ -6,5 +6,6 @@
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
   <%= link_to "Back to recipes", recipes_path %>
 
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  <%= link_to "Generate shopping list", generate_shopping_path(id:@recipe)  %>
+   <%= link_to "Add ingredient", new_recipe_food_path %>
 </div>

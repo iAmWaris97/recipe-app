@@ -20,6 +20,7 @@ class RecipesController < ApplicationController
   # POST /recipes or /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user = current_user
 
     respond_to do |format|
       if @recipe.save
@@ -56,6 +57,7 @@ class RecipesController < ApplicationController
   end
 
   def public; end
+  def generate_shopping; end
 
   private
 
