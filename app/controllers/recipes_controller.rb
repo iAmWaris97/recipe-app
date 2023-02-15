@@ -57,7 +57,9 @@ class RecipesController < ApplicationController
   end
 
   def public; end
-  def generate_shopping; end
+  def generate_shopping
+    @general_shopping = Recipe.find(params[:id])
+  end
 
   private
 
