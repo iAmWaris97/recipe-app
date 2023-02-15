@@ -1,17 +1,22 @@
 <div id="<%= dom_id recipe_food %>">
-  <p>
+<p>
+    <strong>Food</strong>
+    <%= recipe_food.food.name %>
+  </p>
+     <p>
     <strong>Quantity:</strong>
-    <%= recipe_food.quantity %>
+    <%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %>
   </p>
 
   <p>
-    <strong>Food:</strong>
-    <%= recipe_food.food_id %>
+    <strong>Value</strong>
+    <%="$"%><%= recipe_food.food.price.to_s.to_d*recipe_food.quantity.to_s.to_d %>
   </p>
 
   <p>
-    <strong>Recipe:</strong>
-    <%= recipe_food.recipe_id %>
+    <strong>Actions</strong>
+    <%= link_to "Modify", edit_recipe_food_path(id: recipe_food) %>
+    <%= button_to "Remove", recipe_food, method: :delete %>
   </p>
 
 </div>
