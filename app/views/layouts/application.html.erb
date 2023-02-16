@@ -18,6 +18,7 @@
   <li> <%= link_to "Public recipes", public_recipes_path  %></li>
   <li> <%= link_to "Foods", foods_path  %></li>
   <% if user_signed_in? %>
+  <li> <%=current_user.name  %></li>
   <%= button_to "Sign Out", destroy_user_session_path, method: :delete%>
   <%else%>
   <li><%= link_to "Log in", new_session_path(resource_name) %></li>
