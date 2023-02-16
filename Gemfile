@@ -23,6 +23,10 @@ gem 'turbo-rails'
 
 # devise for authentication
 gem 'devise'
+
+#CanCan for Authorization
+gem 'cancancan', '~> 1.9'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
 
