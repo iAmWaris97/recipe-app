@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Recipes</h1>
-
 <div id="recipes">
   <% @recipes.each do |recipe| %>
+  <% if can? :destroy, recipe %>
     <p>
       <strong>Name:</strong>
       <%= recipe.name %>
@@ -13,12 +13,13 @@
       <strong>Description:</strong>
       <%= recipe.description %>
     </p>
-
+    
     <%= button_to "Destroy this recipe", recipe, method: :delete %>
 
     <p>
       <%= link_to "Recipe details", recipe %>
     </p>
+    <%end%>
   <% end %>
 </div>
 

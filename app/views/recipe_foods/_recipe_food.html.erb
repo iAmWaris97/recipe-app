@@ -15,8 +15,10 @@
 
   <p>
     <strong>Actions</strong>
+    <%if can? :destroy, recipe_food.recipe%>
     <%= link_to "Modify", edit_recipe_food_path(id: recipe_food) %>
     <%= button_to "Remove", recipe_food, method: :delete %>
+    <%end%>
   </p>
 
 </div>

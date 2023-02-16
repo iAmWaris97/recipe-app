@@ -3,8 +3,11 @@
 <%= render @food %>
 
 <div>
+<% if can? :edit, @foods %>
   <%= link_to "Edit this food", edit_food_path(@food) %> |
+  <%end%>
   <%= link_to "Back to foods", foods_path %>
-
+<% if can? :destroy, @foods %>
   <%= button_to "Destroy this food", @food, method: :delete %>
+  <%end%>
 </div>
