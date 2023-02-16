@@ -20,13 +20,15 @@
   <%arr = []%>
   <%dropdown_recipes.each do |recipe|%>
     
-    <%arr<<[recipe.name, recipe.id]%>
+    <%arr<<[recipe.name, recipe.id] if can? :destroy, recipe%>
   <%end%>
+  <p>Recipe</p>
   <%= form.select :recipe_id, arr %>
 
   </div>
 
   <div>
+  <p>Food</p>
   <%arr = []%>
   <%dropdown_foods.each do |food|%>
     
