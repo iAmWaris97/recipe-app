@@ -1,3 +1,6 @@
 class Inventory < ApplicationRecord
-  has_many :inventory_foods, dependent: :delete_all
+  belongs_to :user
+  has_many :inventory_foods, foreign_key: :inventory_id, dependent: :destroy
+
+  validates :name, presence: true
 end
