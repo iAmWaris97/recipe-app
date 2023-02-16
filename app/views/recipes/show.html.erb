@@ -14,7 +14,9 @@
   <%end%>
   </ul>
 <div>
+<% if can? :update, @recipe %>
   <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
+  <% end %>
   <%= link_to "Back to recipes", recipes_path %>
 </div>
 </div>
