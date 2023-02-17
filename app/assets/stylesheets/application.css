@@ -11,8 +11,40 @@ html {
   font-size: 62.5%;
 }
 
-* {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+ul {
+  padding: 0;
   margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--white);
+  font-size: 1.4rem;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--grey);
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;  
   box-sizing: border-box;
   padding: 0;
 }
@@ -87,3 +119,12 @@ Header {
 
 /* Registraion page */
 
+.recipe-container {
+  max-width: 70rem;
+  margin: 0 3rem;
+  padding: 0rem 1.5rem 3rem;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: var(--grey);
+  border-radius: 0px 0px 25px 25px
+}
