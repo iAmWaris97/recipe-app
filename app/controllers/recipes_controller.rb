@@ -8,7 +8,9 @@ class RecipesController < ApplicationController
   end
 
   # GET /recipes/1 or /recipes/1.json
-  def show; end
+  def show
+    @inventories = Inventory.all
+  end
 
   # GET /recipes/new
   def new
@@ -62,7 +64,9 @@ class RecipesController < ApplicationController
   end
 
   def generate_shopping
-    @general_shopping = Recipe.find(params[:id])
+    @recipes = Recipe.find(params[:recipe_id])
+    @inventory = Inventory.find(params[:inventory_id])
+    @general_shopping = Recipe.find(params[:recipe_id])
   end
 
   private

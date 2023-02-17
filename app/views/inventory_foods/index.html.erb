@@ -4,6 +4,7 @@
 
 <div id="inventory_foods">
   <% @inventory_foods.each do |inventory_food| %>
+    <h1 class = "name"><%= inventory_food.food.name%></h1>
     <%= render inventory_food %>
     <p>
       <%= link_to "Show this inventory food", inventory_food %>

@@ -4,3 +4,4 @@ class Inventory < ApplicationRecord
 
   validates :Name, presence: true
 end
+

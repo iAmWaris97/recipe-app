@@ -4,9 +4,11 @@
 
 <div id="inventories">
   <% @inventories.each do |inventory| %>
-    <%= render inventory %>
+    <%= inventory.Name %>
+    <p>Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ipsa incidunt aliquam eligendi autem similique facere fuga eos voluptate. Officiis error, quo neque ut repellat porro voluptate possimus sapiente impedit.</p>
     <p>
       <%= link_to "Show this inventory", inventory %>
+      <%= button_to "Remove", inventory, method: :delete %>
     </p>
   <% end %>
 </div>
