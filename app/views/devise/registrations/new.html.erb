@@ -1,5 +1,5 @@
 <div class="recipe-container">
-<h1>Sign up</h1>
+<h1>CREATE ACCOUNT</h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -28,9 +28,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'submitBtn'%>
   </div>
 <% end %>
-
+<div class="link">
 <%= render "devise/shared/links" %>
+</div>
 </div>

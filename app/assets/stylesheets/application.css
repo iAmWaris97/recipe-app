@@ -120,13 +120,18 @@ Header {
 /* Registraion page */
 
 .recipe-container {
-  max-width: 70rem;
-  margin: 0 3rem;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 2%;
+  margin-right: auto;
+  height: 75vh;
   padding: 0 1.5rem 3rem;
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: var(--grey);
-  border-radius: 0 0 25px 25px;
+  /*border-color: var(--grey);*/
+  border: #B33030 solid 1px;
+  border-radius: 25px;
+
 }
 
 h1 {
@@ -134,4 +139,46 @@ h1 {
   font-weight: bold;
   text-align: center;
   padding: 1.6rem;
+}
+
+form input {
+  width: 100%;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+form label {
+  font-size: 18px;
+  margin-left: 3px;
+}
+
+.field {
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+}
+
+.submitBtn {
+  background-color: #219F94;
+  color: white;
+  padding: 2px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.link {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.link a {
+  background-color: #219F94;
+  color: white;
+  padding: 2px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
