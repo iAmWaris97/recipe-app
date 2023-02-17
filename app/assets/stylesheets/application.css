@@ -1,8 +1,8 @@
 :root {
-  --blue: #0F6292;
-  --green: #16FF00;
-  --dark: #2D2D2D;
-  --grey: #ECECEC;
+  --blue: #0f6292;
+  --green: #16ff00;
+  --dark: #2d2d2d;
+  --grey: #ececec;
   --white: #fff;
 }
 
@@ -39,17 +39,16 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow-x: hidden;
-  background-color: var(--grey);
   margin: 0 auto;
 }
 
 * {
-  margin: 0;  
+  margin: 0;
   box-sizing: border-box;
   padding: 0;
 }
 
-Header {
+header {
   width: 100%;
 }
 
@@ -62,7 +61,7 @@ Header {
   display: flex;
   gap: 15px;
   list-style: none;
-  background-color: #000000;
+  background-color: #000;
   justify-content: flex-start;
   align-items: center;
 }
@@ -71,7 +70,7 @@ Header {
   color: white;
 }
 
-.nav_item  a,
+.nav_item a,
 .login_btn a {
   text-decoration: none;
   color: white;
@@ -87,7 +86,7 @@ Header {
 
 .name {
   background-color: white;
-  color: #000000;
+  color: #000;
   border-radius: 50%;
   font-weight: 700;
   padding: 2px;
@@ -95,7 +94,7 @@ Header {
 }
 
 .signOut {
-  background-color: #B33030;
+  background-color: #b33030;
   color: white;
   border-radius: 10px;
   width: fit-content;
@@ -106,7 +105,7 @@ Header {
 }
 
 .login_btn {
-  background-color: #219F94;
+  background-color: #219f94;
   color: white;
   border-radius: 10px;
   width: fit-content;
@@ -128,10 +127,10 @@ Header {
   padding: 0 1.5rem 3rem;
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  /*border-color: var(--grey);*/
-  border: #B33030 solid 1px;
-  border-radius: 25px;
 
+  /* border-color: var(--grey); */
+  border: #b33030 solid 1px;
+  border-radius: 25px;
 }
 
 h1 {
@@ -159,7 +158,7 @@ form label {
 }
 
 .submitBtn {
-  background-color: #219F94;
+  background-color: #219f94;
   color: white;
   padding: 2px;
   font-weight: 700;
@@ -172,7 +171,7 @@ form label {
 }
 
 .link a {
-  background-color: #219F94;
+  background-color: #219f94;
   color: white;
   padding: 2px;
   font-weight: 700;
