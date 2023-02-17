@@ -92,3 +92,21 @@ table {
   margin-top: 2%;
 }
 
+thead th:nth-child(4) {
+  width: 30%;
+}
+
+th,
+td {
+  padding: 3px 20px;
+}
+
+.f-act {
+  display: flex;
+  justify-content: center;
+}
+
+.f-act button {
+  width: 5em;
+  margin-right: 1em;
+}
