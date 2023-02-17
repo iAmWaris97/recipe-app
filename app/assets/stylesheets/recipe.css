@@ -65,3 +65,18 @@ form.button_to button {
   background-color: var(--red);
 }
 
+.act-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-forward {
+  margin-top: 2%;
+}
+
+.if-public {
+  background-color: var(--red);
+  padding: 8px;
+  border-radius: 5%;
+  color: var(--white);
+}
