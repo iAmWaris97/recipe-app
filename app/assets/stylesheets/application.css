@@ -1,15 +1,73 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+Header {
+  width: 100%;
+}
+
+.nav-items {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: unset;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  background-color: #000000;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav_item {
+  color: white;
+}
+
+.nav_item  a,
+.login_btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.signOut_and_userName {
+  margin-left: auto;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  background-color: white;
+  color: #000000;
+  border-radius: 50%;
+  font-weight: 700;
+  padding: 2px;
+  text-align: center;
+}
+
+.signOut {
+  background-color: #B33030;
+  color: white;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 2px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+}
+
+.login_btn {
+  background-color: #219F94;
+  color: white;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 2px;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+}
