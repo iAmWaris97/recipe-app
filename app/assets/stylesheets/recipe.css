@@ -2,11 +2,9 @@
   width: 80%;
   margin: 0 auto;
   margin-top: 2%;
-  margin-right: auto;
-  height: 75vh;
   padding: 0 1.5rem 3rem;
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
+  border: 2px solid var(--blue);
+  height: 75vh;
 }
 
 .recipes-title {
@@ -17,13 +15,20 @@
 
 .recipes-features {
   width: 100%;
-  max-width: 70rem;
+  max-width: 80rem;
   margin: auto;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--grey);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   margin-bottom: 3rem;
   gap: 1rem;
+}
+
+.list_btn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
