@@ -13,7 +13,7 @@
 
   <div>
     <%= form.label :quantity, style: "display: block" %>
-    <%= form.text_field :quantity %>
+    <%= form.number_field :quantity, in: 1.0..100.0 %>
   </div>
 
   <div>
