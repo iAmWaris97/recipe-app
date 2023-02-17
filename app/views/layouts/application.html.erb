@@ -11,21 +11,31 @@
 
   <body>
   <body>
-  <header>
-  <ul>
-  <li> <%= link_to "Recipes", recipes_path  %></li>
-  <li> <%= link_to "Inventories", inventories_path  %></li>
-  <li> <%= link_to "Public recipes", public_recipes_path  %></li>
-  <li> <%= link_to "Foods", foods_path  %></li>
+  <header class="nav">
+  <ul class="nav-items">
+  <li class="nav_item"> <%= link_to "Recipes", recipes_path  %></li>
+  <li class="nav_item"> <%= link_to "Inventories", inventories_path  %></li>
+  <li class="nav_item"> <%= link_to "Foods", foods_path  %></li>
+  <li class="nav_item"> <%= link_to "Public", public_recipes_path  %></li>
   <% if user_signed_in? %>
-  <li> <%=current_user.name  %></li>
-  <%= button_to "Sign Out", destroy_user_session_path, method: :delete%>
+  <li class="signOut_and_userName"> 
+  <div><%= button_to "Sign out", destroy_user_session_path, method: :delete, class: 'signOut'%></div>
+  <div class="name"><%=current_user.name[0..1].upcase  %></div>
+  </li>
   <%else%>
-  <li><%= link_to "Log in", new_session_path(resource_name) %></li>
+  <li class="login_btn">
+  <% if current_page?(new_user_registration_path) %>
+  <%= link_to "Log in", new_session_path(resource_name) %>
+  <% else%>
+  <%= link_to "Sign up", new_registration_path(resource_name) %><br />
   <%end%>
+  </li>
+  <%end%>
+
+  
+
   </ul>
   </header>
-    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
