@@ -4,8 +4,7 @@
   <%= render @recipe %> 
   <div class="list_btn act-btns">
     <div>
-      <button class="recipe_btn"><%= link_to "Generate shopping list", generate_shopping_path(recipe_id:@recipe,inventory_id:@inventories[0].id)  %></button>
-
+      <button class="gen_shopping_btn recipe_btn">Generate shopping list</button>
       <%if can? :destroy, @recipe%>
       <button class="recipe_btn"><%= link_to "Add ingredient", new_recipe_food_path %></button>
       <%end%>
@@ -22,26 +21,6 @@
       <%end%>
     </ul>
   </div>
-<div>
-<div>
-<div>
-  <button class="gen_shopping_btn">Generate shopping list</button>
-  <%if can? :destroy, @recipe%>
-   <%= link_to "Add ingredient", new_recipe_food_path %>
-   <%end%>
-  </div>
-
-   <ul>
-  <%@recipe.recipe_foods.each do |food|%>
-  <%= render food if food != nil %>
-  <%end%>
-  </ul>
-<div>
-<% if can? :update, @recipe %>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <% end %>
-  <%= link_to "Back to recipes", recipes_path %>
-</div>
 </div>
 
 <section class="modal_shopping">
