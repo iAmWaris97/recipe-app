@@ -129,14 +129,6 @@ Header {
   border-radius: 0 0 25px 25px;
 }
 
-.recipe-container h2 {
-  text-align: center;
-  font-size: 1.4rem;
-  padding: 1rem;
-  font-style: italic;
-  font-weight: normal;
-}
-
 h1 {
   font-size: 2.1rem;
   font-weight: bold;
