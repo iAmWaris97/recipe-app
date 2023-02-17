@@ -15,7 +15,7 @@ RSpec.describe 'Recipe index page', type: :system do
   describe 'the recipe index page' do
     it 'displays the displays the available recipes' do
       visit recipes_path
-      expect(page).to have_content('ebu')
+      expect(page).to have_content('recipe 1')
     end
 
     it 'shows the correct recipe' do
