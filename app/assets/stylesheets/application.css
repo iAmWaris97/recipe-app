@@ -122,9 +122,24 @@ Header {
 .recipe-container {
   max-width: 70rem;
   margin: 0 3rem;
-  padding: 0rem 1.5rem 3rem;
-  border-width: 0px 1px 1px 1px;
+  padding: 0 1.5rem 3rem;
+  border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: var(--grey);
-  border-radius: 0px 0px 25px 25px
+  border-radius: 0 0 25px 25px;
+}
+
+.recipe-container h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-style: italic;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.6rem;
 }
