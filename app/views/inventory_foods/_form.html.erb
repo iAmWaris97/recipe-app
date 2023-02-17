@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field">
     <%= form.label :quantity, style: "display: block" %>
     <%= form.text_field :quantity %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :inventory_id, "Select an inventory:", style: "display: block" %>
     <%= form.select :inventory_id, options_for_select(Inventory.pluck(:Name, :id)), include_blank: true %>
   </div>
 
-<div>
+<div class="field">
     <%= form.label :food_id, "Select a Food:", style: "display: block" %>
     <%= form.select :food_id, options_for_select(Food.pluck(:name, :id)), include_blank: true %>
   </div>
@@ -29,6 +29,6 @@
 
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create inventory food", class: "logInBtn" %>
   </div>
 <% end %>

@@ -11,24 +11,24 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field">
     <%= form.label :quantity, style: "display: block" %>
     <%= form.text_field :quantity %>
   </div>
 
-  <div>
+  <div class="field">
   <%arr = []%>
   <%dropdown_recipes.each do |recipe|%>
     
     <%arr<<[recipe.name, recipe.id] if can? :destroy, recipe%>
   <%end%>
-  <p>Recipe</p>
+  <h2>Recipe</h2>
   <%= form.select :recipe_id, arr %>
 
   </div>
 
-  <div>
-  <p>Food</p>
+  <div class="field">
+  <h2>Food</h2>
   <%arr = []%>
   <%dropdown_foods.each do |food|%>
     
@@ -39,6 +39,6 @@
 
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Add recipe food", class: "logInBtn" %>
   </div>
 <% end %>

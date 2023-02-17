@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div class="field">
+    <%= form.label "recipe name", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :preparation_time, style: "display: block" %>
     <%= form.number_field :preparation_time %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :cooking_time, style: "display: block" %>
     <%= form.number_field :cooking_time %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description%>
   </div>
 
-  <div>
-    <%= form.label :public, style: "display: block" %>
+  <div class="rember">
     <%= form.check_box :public %>
+    <%= form.label :public, style: "display: block" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create Recipe", class: "logInBtn"%>
   </div>
 <% end %>
