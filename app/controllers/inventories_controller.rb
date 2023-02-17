@@ -21,6 +21,7 @@ class InventoriesController < ApplicationController
   # POST /inventories or /inventories.json
   def create
     @inventory = Inventory.new(inventory_params)
+    @inventory.user = current_user
 
     respond_to do |format|
       if @inventory.save
