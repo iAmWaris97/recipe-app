@@ -11,9 +11,9 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Diary App ](#-diary-app-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
+- [📖 Recipe App Recipe App](#-recipe-app-recipe-app)
+  - [🛠 Built With Ruby On Rails](#-built-with-ruby-on-rails)
+    - [Tech Stack Rails](#tech-stack-rails)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
@@ -31,13 +31,13 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Diary App <a name="about-project"></a>
+# 📖 Recipe App <a name="about-project">Recipe App</a>
 
-**Diary App** is an under buiding blog app, which is going to be a full-stack RoR app.
+**Recipe App** is an under buiding blog app, which is going to be a full-stack RoR app.
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with">Ruby On Rails</a>
 
-### Tech Stack <a name="tech-stack"></a>
+### Tech Stack <a name="tech-stack">Rails</a>
 
 > Ruby on Rails
 
