@@ -17,14 +17,16 @@
   </div>
 
   <div>
-    <%= form.label :inventory_id, style: "display: block" %>
-    <%= form.text_field :inventory_id %>
+    <%= form.label :inventory_id, "Select an inventory:", style: "display: block" %>
+    <%= form.select :inventory_id, options_for_select(Inventory.pluck(:Name, :id)), include_blank: true %>
   </div>
 
-  <div>
-    <%= form.label :food_id, style: "display: block" %>
-    <%= form.text_field :food_id %>
+<div>
+    <%= form.label :food_id, "Select a Food:", style: "display: block" %>
+    <%= form.select :food_id, options_for_select(Food.pluck(:name, :id)), include_blank: true %>
   </div>
+
+
 
   <div>
     <%= form.submit %>
