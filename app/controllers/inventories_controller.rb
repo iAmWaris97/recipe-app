@@ -1,4 +1,5 @@
 class InventoriesController < ApplicationController
+  load_and_authorize_resource
   before_action :set_inventory, only: %i[show edit update destroy]
 
   # GET /inventories or /inventories.json
@@ -20,6 +21,7 @@ class InventoriesController < ApplicationController
   # POST /inventories or /inventories.json
   def create
     @inventory = Inventory.new(inventory_params)
+    @inventory.user = current_user
 
     respond_to do |format|
       if @inventory.save
