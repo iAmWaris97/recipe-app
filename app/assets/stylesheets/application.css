@@ -1,3 +1,16 @@
+:root {
+  --blue: #0F6292;
+  --green: #16FF00;
+  --dark: #2D2D2D;
+  --grey: #ECECEC;
+  --white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -71,3 +84,6 @@ Header {
   font-size: 18px;
   border: none;
 }
+
+/* Registraion page */
+
