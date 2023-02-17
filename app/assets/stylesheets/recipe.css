@@ -82,3 +82,13 @@ form.button_to button {
   border-radius: 5%;
   color: var(--white);
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--blue);
+  text-align: center;
+  margin-top: 2%;
+}
+
