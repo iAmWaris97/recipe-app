@@ -53,4 +53,20 @@ RSpec.describe "Recipes", type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
+
+  describe 'GET /public_recipes' do
+    it 'returns http success' do
+      get "/public_recipes"
+      expect(response).to have_http_status(:ok)
+    end
+
+    it "render public template)" do
+      get "/public_recipes"
+      expect(response).to render_template(:public)
+    end
+    it "render correct response body)" do
+      get "/public_recipes"
+      expect(response.body).to include('recipe 1')
+    end
+  end
 end
