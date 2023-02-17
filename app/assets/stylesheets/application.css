@@ -157,7 +157,8 @@ form label {
   font-weight: 700;
 }
 
-.submitBtn {
+.submitBtn,
+.logInBtn {
   background-color: #219f94;
   color: white;
   padding: 2px;
@@ -180,4 +181,19 @@ form label {
   width: 100%;
   display: block;
   text-align: center;
+}
+
+.rember {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  gap: 5px;
+  padding: 10px;
+}
+
+.rember input {
+  width: fit-content;
 }
