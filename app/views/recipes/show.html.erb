@@ -4,7 +4,7 @@
 
 <div>
 <div>
-  <%= link_to "Generate shopping list", generate_shopping_path(id:@recipe)  %>
+  <%= link_to "Generate shopping list", generate_shopping_path(recipe_id:@recipe,inventory_id:@inventories[0].id)  %>
    <%= link_to "Add ingredient", new_recipe_food_path %>
   </div>
 
