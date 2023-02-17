@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RecipeFood, type: :model do
-  subject {RecipeFood.new(quantity: '1', recipe_id: 3, food_id: 1)}
+  subject { RecipeFood.new(quantity: '1', recipe_id: 3, food_id: 1) }
   before { subject.save }
 
   it 'Food quantity should be present' do

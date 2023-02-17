@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
-   subject {Recipe.new(name: 'recipe 1', preparation_time: 2, cooking_time: 3, description: 'Boil for 3 hours', public:true, user_id: 1)}
+  subject { Recipe.new(name: 'recipe 1', preparation_time: 2, cooking_time: 3, description: 'Boil for 3 hours', public: true, user_id: 1) }
   before { subject.save }
 
   it 'Recipe name should be present' do
@@ -13,7 +13,7 @@ RSpec.describe Recipe, type: :model do
     expect(subject.name).to eql 'recipe 1'
   end
 
-   it 'Preparation time should be present and equal 2' do
+  it 'Preparation time should be present and equal 2' do
     expect(subject.preparation_time).to eql 2
   end
 

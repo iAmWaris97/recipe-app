@@ -1,25 +1,25 @@
 require 'spec_helper'
 require 'rails_helper'
 
-RSpec.describe "Foods", type: :request do
-  before (:example) do
-    @user = User.create(name:'ebu', email: 'test@test2.com', password: "password", password_confirmation: "password")
+RSpec.describe 'Foods', type: :request do
+  before(:example) do
+    @user = User.create(name: 'ebu', email: 'test@test2.com', password: 'password', password_confirmation: 'password')
     @user.skip_confirmation!
     sign_in @user
     @inventory = Inventory.create(user_id: @user.id, Name: 'inventory 1')
   end
-  describe "GET /inventories" do
-    it "Get /inventory url template" do
+  describe 'GET /inventories' do
+    it 'Get /inventory url template' do
       get '/inventories'
       expect(response).to have_http_status(200)
     end
 
-    it "render index template)" do
+    it 'render index template)' do
       get '/inventories'
       expect(response).to render_template(:index)
     end
 
-    it "render correct response body)" do
+    it 'render correct response body)' do
       get '/inventories'
       expect(response.body).to include('inventory 1')
     end
@@ -31,12 +31,12 @@ RSpec.describe "Foods", type: :request do
       expect(response).to have_http_status(:ok)
     end
 
-    it "render correct response body)" do
+    it 'render correct response body)' do
       get "/inventories/#{@inventory.id}"
       expect(response.body).to include('inventory 1')
     end
 
-    it "render show template)" do
+    it 'render show template)' do
       get "/inventories/#{@inventory.id}"
       expect(response).to render_template(:show)
     end
@@ -44,7 +44,7 @@ RSpec.describe "Foods", type: :request do
 
   describe 'GET /inventories/new' do
     it 'returns http success' do
-      get "/inventories/new"
+      get '/inventories/new'
       expect(response).to have_http_status(:ok)
     end
   end

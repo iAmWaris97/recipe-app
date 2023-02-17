@@ -4,7 +4,7 @@ RSpec.describe User, type: :model do
   subject { User.new(name: 'oswald', email: 'test@gmail.com', encrypted_password: 'bjfodfnwfncwodnwodwvcb') }
   before { subject.save }
 
-   it 'name should be present' do
+  it 'name should be present' do
     subject.name = nil
     expect(subject).to_not be_valid
   end

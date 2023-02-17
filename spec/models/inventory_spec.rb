@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Inventory, type: :model do
-  subject {Inventory.new(user_id: 1, Name: 'inventory 1')}
+  subject { Inventory.new(user_id: 1, Name: 'inventory 1') }
   before { subject.save }
 
   it 'Food Name should be present' do

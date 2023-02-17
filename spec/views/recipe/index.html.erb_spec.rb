@@ -1,17 +1,15 @@
 require 'rails_helper'
-require 'rails_helper'
 
 RSpec.describe 'Recipe index page', type: :system do
-
-before(:example) do
-    @user = User.create(name:'ebu', email: 'test@test3.com', password: "password", password_confirmation: "password")
+  before(:example) do
+    @user = User.create(name: 'ebu', email: 'test@test3.com', password: 'password', password_confirmation: 'password')
     @user.skip_confirmation!
-    @user1 = User.create(name:'ndorrh', email: 'test@test2.com', password: "password", password_confirmation: "password")
+    @user1 = User.create(name: 'ndorrh', email: 'test@test2.com', password: 'password', password_confirmation: 'password')
     @user1.skip_confirmation!
     sign_in @user
 
-    @recipe1 = Recipe.create(name: 'recipe 1', preparation_time: 2, cooking_time: 3, description: 'Boil for 3 hours', public:true, user_id: @user.id)
-    @recipe2 = Recipe.create(name: 'recipe 2', preparation_time: 4, cooking_time: 1, description: 'Keep cooking dev', public:true, user_id: @user.id)
+    @recipe1 = Recipe.create(name: 'recipe 1', preparation_time: 2, cooking_time: 3, description: 'Boil for 3 hours', public: true, user_id: @user.id)
+    @recipe2 = Recipe.create(name: 'recipe 2', preparation_time: 4, cooking_time: 1, description: 'Keep cooking dev', public: true, user_id: @user.id)
   end
 
   describe 'the recipe index page' do

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
-  subject {Food.new(name: 'Apple', measurement_unit: 'grams', price:3)}
+  subject { Food.new(name: 'Apple', measurement_unit: 'grams', price: 3) }
   before { subject.save }
 
   it 'Food name should be present' do
@@ -18,7 +18,7 @@ RSpec.describe Food, type: :model do
     expect(subject).to be_valid
   end
 
-   it 'price should be present' do
+  it 'price should be present' do
     subject.price = 3
     expect(subject).to be_valid
   end
