@@ -11,16 +11,16 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Recipe App Recipe App](#-recipe-app-recipe-app)
-  - [🛠 Built With Ruby On Rails](#-built-with-ruby-on-rails)
-    - [Tech Stack Rails](#tech-stack-rails)
+- [📖 Recipe App ](#-recipe-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Ruby on Rails ](#ruby-on-rails-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
     - [Usage](#usage)
+    - [Run tests](#run-tests)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -31,27 +31,25 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Recipe App <a name="about-project">Recipe App</a>
+# 📖 Recipe App <a name="about-project"></a>
 
-**Recipe App** is an under buiding blog app, which is going to be a full-stack RoR app.
+**The Recipe app** keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
-## 🛠 Built With <a name="built-with">Ruby On Rails</a>
+## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack">Rails</a>
-
-> Ruby on Rails
+### Ruby on Rails <a name="tech-stack"></a>
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">RoR Views/Teplates</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://www.rackservers.com/">Rack</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
   </ul>
 </details>
 
@@ -62,15 +60,17 @@
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-Key features of the application.
-
-- **Create User**
-- **Write a Post**
-- **Like/comment on the posts**
+- **Login page and registration page built with Devise**
+- **A food list (with all CRUD implementation, except for 'update')**
+- **A recipes list (with all CRUD implementation, except for 'update')**
+- **A general shopping list view (all missing food for all your recipes and total price)**
+- **A list of all public recipes from other users with their names and total prices**
+- **Recipe details page allowing owner to add new food:**
+- **Inventory page allowing owner to add new food:**
+- **Navigate menu allowing users to open created pages**
+- **Set up with Rspec and Capybara testing libraries**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,93 +78,40 @@ Key features of the application.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-The project is not currently hosted and will go live after the completion.
-
-<!-- - [Live Demo Link](https://yourdeployedapplicationlink.com)   -->
+> Live Demo link will be added at the end of the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
-
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need to:
+In order to run this project you need:
 
-> Install Ruby </br>
-> Install PostgreSQL </br>
-> Install Rails
+ Ruby installed
+ Postgresql installed
+
+ gem install rails
 
 ### Setup
 
-Clone this repository to your desired folder:
+Clone this repository to your desired folder: git clone https://github.com/iAmWaris97/recipe-app.git
 
-```sh
- git clone https://github.com/iAmWaris97/diary.git
-```
+cd recipe-app
 
-Move inside the directory:
-
-```sh
- cd diary
-```
-
-### Install
-
-Install this project with:
-
-> run
-
-```sh
- bundle install
-```
 
 ### Usage
 
-To run the project, execute the following commands:
+To run the project, execute the following command: rails server
 
-> run
+### Run tests
 
-```sh
- rails server
-```
+To run tests, run the following command: rspec
 
-> run
-
-```sh
- rails db:create
-```
-
-Open the app on http://localhost:3000/
-
-<!-- ### Run tests
-
-To run tests, run the following command: -->
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-<!-- ### Deployment
-
-You can deploy this project using: -->
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- AUTHORS -->
 
@@ -182,15 +129,21 @@ Example:
 - Twitter: [@TheErickHans](https://twitter.com/TheErickHans)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
+👤 **Ndorrh Oswald Ebu**
+
+- GitHub: [@ndorrh](https://github.com/ndorrh)
+- Twitter: [@Ndorrh Ebu](https://twitter.com/NdorrhEbu)
+- LinkedIn: [ndorrh](https://linkedin.com/in/ndorrhoswaldebu)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Create User**
-- [ ] **Add post**
-- [ ] **Add like and comments**
+- [ ] **Create following system**
+- [ ] **Add option to allow users to comment on recipe**
+- [ ] **Add like and comments and recipe**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,7 +153,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/iAmWaris97/recipe-app/issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,7 +179,7 @@ I would like to thank the Microverse organization and Ruby on Rails co founders 
 
 - **What is this app about?**
 
-  - This is a blog app, where users can create accounts and post their blogs.
+  - This is a recipe app, where users can create and view recipe.
 
 - **What are the technologies used building this app?**
 
