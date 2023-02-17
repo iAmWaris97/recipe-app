@@ -4,7 +4,7 @@
 
 <div>
 <div>
-  <%= link_to "Generate shopping list", generate_shopping_path(recipe_id:@recipe,inventory_id:@inventories[0].id)  %>
+  <button class="gen_shopping_btn">Generate shopping list</button>
   <%if can? :destroy, @recipe%>
    <%= link_to "Add ingredient", new_recipe_food_path %>
    <%end%>
@@ -22,3 +22,25 @@
   <%= link_to "Back to recipes", recipes_path %>
 </div>
 </div>
+
+<section class="modal_shopping">
+  <div class="modal-content">
+    <button class="shopping_close_btn">X</button>
+    <h1>Generating Shopping List:</h1>
+    <p>Choose an inventory to use:</p>
+    <%= render 'shopping_list'%>
+  </div>
+</section>
+
+<script>
+
+  document.querySelector('.gen_shopping_btn').addEventListener('click', (event) => {
+    document.querySelector('.modal_shopping').style.visibility = 'visible'
+    document.querySelector('#body').style.overflow = 'hidden'
+  })
+
+  document.querySelector('.shopping_close_btn').addEventListener('click', (event) => {
+    document.querySelector('.modal_shopping').style.visibility = 'hidden'
+    document.querySelector('#body').style.overflow = 'scroll'
+  })
+</script>
