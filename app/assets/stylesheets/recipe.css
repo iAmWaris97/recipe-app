@@ -26,9 +26,39 @@
   gap: 1rem;
 }
 
+.recipes-features .btn {
+  padding: 5px 14px;
+  color: var(--white);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
 .list_btn {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.list_btn .recipe_btn, .list_btn .details {
+  background-color: var(--green);
+  padding: 5px 14px;
+  color: var(--white);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.list_btn .recipe_btn:hover {
+  box-shadow: 3px 3px 4px 1px #0e0e0e9e;
+}
+
+form.button_to button {
+  /* background: none;
+  background-color: var(--red);
+  border: none;
+  color: var(--white); */
 }
