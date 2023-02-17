@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :inventories
   get "/public_recipes", to: "recipes#public", as: :public_recipes
   get "/general_shopping_list", to: "recipes#generate_shopping", as: :generate_shopping
+  get '/shopping_lists/:recipe_id', to: 'shopping_lists#index', as: 'shopping_list'
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :Name, style: "display: block" %>
+  <div class="field">
+    <%= form.label "Inventory Name", style: "display: block" %>
     <%= form.text_field :Name %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create inventory", class:"logInBtn" %>
   </div>
 <% end %>

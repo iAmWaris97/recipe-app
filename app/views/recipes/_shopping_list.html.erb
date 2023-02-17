@@ -1,0 +1,19 @@
+<%= form_with url: shopping_list_path(recipe_id: @recipe), method: :get, id: "shopping-form" do |form| %>
+  <div class="generate-shopping-list-div">
+    <%= form.select :inventory_id, @inventories.collect { |inventory| [inventory.Name, inventory.id] }, { :prompt => 'Click to see inventories'}, required: true, class: "see-inventories" %>
+    <%= form.submit "Generate"%>
+  
+  </div>
+  <% end %>
+
+<script>
+  const form = document.getElementById("shopping-form");
+
+  const select = form.elements["shopping_list[inventory_id]"];
+
+  select.addEventListener("change", function() {
+    const inventoryId = select.value;
+
+    form.action = "<%= shopping_list_path(recipe_id: @recipe) %>?" + "inventory_id=" + inventoryId;
+  });
+</script>

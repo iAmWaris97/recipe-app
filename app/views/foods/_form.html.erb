@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :measurement_unit, style: "display: block" %>
     <%= form.text_field :measurement_unit %>
   </div>
 
-  <div>
+  <div class="field">
     <%= form.label :price, style: "display: block" %>
     <%= form.text_field :price %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Create food", class: "logInBtn" %>
   </div>
 <% end %>
