@@ -17,8 +17,12 @@
   </div>
 
   <div class="field">
+  <%arr = []%>
+  <%dropdown_inventories.each do |inventory|%>
+  <%arr << [inventory.Name, inventory.id] if can? :destroy, inventory%>
+  <%end%>
     <%= form.label :inventory_id, "Select an inventory:", style: "display: block" %>
-    <%= form.select :inventory_id, options_for_select(Inventory.pluck(:Name, :id)), include_blank: true %>
+    <%= form.select :inventory_id, options_for_select(arr), include_blank: true %>
   </div>
 
 <div class="field">
