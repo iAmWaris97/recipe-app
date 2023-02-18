@@ -85,7 +85,8 @@ form.button_to button {
 
 table {
   table-layout: fixed;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   border-collapse: collapse;
   border: 3px solid var(--blue);
   text-align: center;
@@ -109,4 +110,9 @@ td {
 .f-act button {
   width: 5em;
   margin-right: 1em;
+}
+
+strong {
+  padding: 0.5em;
+  display: block;
 }
