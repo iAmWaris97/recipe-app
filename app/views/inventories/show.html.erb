@@ -11,20 +11,21 @@
 </div>
 
 
-<h2>Foods in this inventory:</h2>
-
-<%= link_to "New inventory food", new_inventory_food_path %>
-<table>
+<div class= 'foods-container'>
+<div class="add-food"><%= link_to "Add food", new_inventory_food_path %></div>
+<hr class='new1'>
+<table class='inventories-table'>
   <tr>
     <th>Food</th>
     <th>Quantity</th>
     <th>Actions</th>
   </tr>
   <% @inventory.inventory_foods.each do |inventory_food| %>
-  <tr>
+  <tr class ='t-data'>
     <td><%= inventory_food.food.name %></td>
     <td><%= inventory_food.quantity %><%= inventory_food.food.measurement_unit %></td>
     <td><%= button_to "Remove", inventory_food, method: :delete %></td>
   </tr>
   <% end %>
 </table>
+</div>

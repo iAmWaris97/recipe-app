@@ -5,12 +5,16 @@
 <div id="inventories">
   <% @inventories.each do |inventory| %>
   <%if can? :destroy, inventory%>
-    <%= inventory.Name %>
-    <p>Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ipsa incidunt aliquam eligendi autem similique facere fuga eos voluptate. Officiis error, quo neque ut repellat porro voluptate possimus sapiente impedit.</p>
+  <div class="inventory__container">
+    <div class="inventories__name-btn">
+      <%= inventory.Name %>
+      <%= button_to "Remove", inventory, method: :delete %>
+    </div>
+    <p class= "inventories__description">Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ipsa incidunt aliquam eligendi autem similique facere fuga eos voluptate. Officiis error, quo neque ut repellat porro voluptate possimus sapiente impedit.</p>
     <p>
       <%= link_to "Show this inventory", inventory %>
-      <%= button_to "Remove", inventory, method: :delete %>
     </p>
+  </div>
     <%end %>
   <% end %>
 </div>
