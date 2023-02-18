@@ -4,12 +4,12 @@ class RecipesController < ApplicationController
 
   # GET /recipes or /recipes.json
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.includes(:recipe_foods).all
   end
 
   # GET /recipes/1 or /recipes/1.json
   def show
-    @inventories = Inventory.all
+    @inventories = Inventory.includes(:inventory_food).all
   end
 
   # GET /recipes/new
@@ -73,7 +73,7 @@ class RecipesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_recipe
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.includes(:recipe_foods).find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.

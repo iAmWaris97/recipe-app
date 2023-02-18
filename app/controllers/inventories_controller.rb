@@ -4,7 +4,7 @@ class InventoriesController < ApplicationController
 
   # GET /inventories or /inventories.json
   def index
-    @inventories = Inventory.all
+    @inventories = Inventory.includes(:inventory_foods).all
   end
 
   # GET /inventories/1 or /inventories/1.json
@@ -61,7 +61,7 @@ class InventoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_inventory
-    @inventory = Inventory.find(params[:id])
+    @inventory = Inventory.includes(:inventory_foods).find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
