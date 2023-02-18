@@ -49,7 +49,8 @@ form.button_to button {
 }
 
 .list_btn .recipe_btn,
-.list_btn .details {
+.list_btn .details,
+button.details {
   background-color: var(--blue);
   padding: 5px 14px;
   color: var(--white);
