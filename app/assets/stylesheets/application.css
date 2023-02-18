@@ -387,3 +387,23 @@ hr.new1 {
   width: 19px;
   cursor: pointer;
 }
+
+.back_food {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.back_food a, #inventories a {
+  background-color: var(--blue);
+  padding: 5px 14px;
+  color: var(--white);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.back_food .food_btn:hover {
+  box-shadow: 3px 3px 4px 1px #0e0e0e9e;
+}
