@@ -1,17 +1,15 @@
-<div id="<%= dom_id food %>">
-  <p>
-    <strong>Name:</strong>
+<div id="<%= dom_id food %>" class="list">
+  <div class="list_food name">
     <%= food.name %>
-  </p>
+  </div>
 
-  <p>
-    <strong>Measurement unit:</strong>
+  <div class="list_food">
     <%= food.measurement_unit %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= food.price %>
-  </p>
+  </div>
+    
+  <div class="list_food">
+    $<%= food.price %>
+  </div>
 
 </div>
+  <button class="list_food_btn"><%= link_to "X", food, data: { turbo_method: :delete } %></button>
