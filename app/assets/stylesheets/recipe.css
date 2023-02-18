@@ -33,6 +33,16 @@
   gap: 1rem;
 }
 
+.f-act {
+  display: flex;
+  justify-content: center;
+}
+
+.f-act button {
+  width: 5em;
+  margin-right: 1em;
+}
+
 .recipes-features .btn,
 form.button_to button {
   padding: 5px 14px;
@@ -49,7 +59,8 @@ form.button_to button {
 }
 
 .list_btn .recipe_btn,
-.list_btn .details {
+.list_btn .details,
+button.details {
   background-color: var(--blue);
   padding: 5px 14px;
   color: var(--white);
@@ -81,4 +92,28 @@ form.button_to button {
   padding: 8px;
   border-radius: 5%;
   color: var(--white);
+}
+
+table {
+  table-layout: fixed;
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  border: 3px solid var(--blue);
+  text-align: center;
+  margin-top: 2%;
+}
+
+th,
+td {
+  padding: 3px 20px;
+}
+
+thead th:nth-child(4) {
+  width: 30%;
+}
+
+strong {
+  padding: 0.5em;
+  display: block;
 }
