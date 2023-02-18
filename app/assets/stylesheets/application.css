@@ -228,6 +228,15 @@ form label {
   z-index: 999;
 }
 
+.shopping_close_btn {
+  color: #fff;
+  background-color: #b33030;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 10%;
+}
+
 .modal-content {
   display: flex;
   flex-direction: column;
@@ -237,7 +246,13 @@ form label {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
-  width: 35%;
+  width: 50%;
+  height: 50%;
+}
+
+.modal-content h1 {
+  color: #219f94;
+  margin: 2.5rem 0;
 }
 
 .modal::before,
@@ -251,4 +266,96 @@ form label {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px); /* for Safari */
   z-index: -1;
+}
+
+.generate-shopping-list-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.generate-shopping-list-div input {
+  margin-top: 1rem;
+  background-color: #0f6292;
+  color: #fff;
+  margin-left: 1rem;
+  max-width: 40%;
+}
+
+.generate-shopping-list-div select {
+  border-radius: 5px;
+  width: 60%;
+}
+
+#inventories {
+  margin: 0 auto;
+  color: #2d2d2d;
+}
+
+.inventory__container {
+  display: flex;
+  gap: 2rem;
+  max-width: 80vw;
+  margin-bottom: 2rem;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.inventories__name-btn {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 800;
+  min-width: 15%;
+  gap: 1.2rem;
+  color: #0f6292;
+}
+
+.inventories__description {
+  font-size: 1.8rem;
+  margin-left: 2rem;
+}
+
+.foods-container {
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: 0 6rem;
+  gap: 2rem;
+}
+
+.inventories-table {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.add-food {
+  align-self: flex-end;
+  min-width: 10%;
+  background-color: #219f94;
+  color: white;
+  padding: 2px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 10%;
+}
+
+tr.t-data:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr.t-data:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tr {
+  text-align: center;
+}
+
+hr.new1 {
+  border-top: 1px solid #219f94;
+  max-width: 85vw;
+  margin: 2rem 15%;
 }
