@@ -395,7 +395,8 @@ hr.new1 {
   justify-content: flex-end;
 }
 
-.back_food a, #inventories a {
+.back_food a,
+#inventories a {
   background-color: var(--blue);
   padding: 5px 14px;
   color: var(--white);
