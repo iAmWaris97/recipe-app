@@ -4,17 +4,11 @@
   </h1>
 
   <div class="recipes-features">
-    <p>
-      <strong>Preparation time:</strong>
-      <%= recipe.preparation_time %> hours
-    </p>
 
-    <p>
-      <strong>Cooking time:</strong>
-      <%= recipe.cooking_time %> hours
-    </p>
-    
+    <strong>Preparation time: <%= recipe.preparation_time %> hours</strong>
+    <strong>Cooking time: <%= recipe.cooking_time %> hours</strong>    
     <strong>Steps to make this recipe</strong>
+    
     <p>
       <%= recipe.description %>
     </p>
