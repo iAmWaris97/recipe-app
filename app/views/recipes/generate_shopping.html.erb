@@ -1,0 +1,26 @@
+<h1>Shopping List</h1>
+<div>
+<p>Amount of food items to buy:<%=@general_shopping.recipe_foods.length%></p>
+<%sum=@general_shopping.recipe_foods.reduce(0) { |sum, recipe_food| sum + recipe_food.food.price.to_s.to_d*recipe_food.quantity.to_s.to_d }%>
+<p>Total value of food needed:<%=sum%></p>
+</div>
+
+<%@general_shopping.recipe_foods.each do |recipe_food|%>
+<div>
+<p>
+    <strong>Food</strong>
+    <%= recipe_food.food.name %>
+  </p>
+
+
+  <p>
+    <strong>Quantity:</strong>
+    <%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %>
+  </p>
+
+  <p>
+    <strong>Price</strong>
+    <%="$"%><%= recipe_food.food.price.to_s.to_d*recipe_food.quantity.to_s.to_d %>
+  </p>
+</div>
+<%end%>

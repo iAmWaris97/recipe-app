@@ -1,0 +1,24 @@
+<div class="recipes-container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Inventories</h1>
+
+  <div id="inventories">
+    <% @inventories.each do |inventory| %>
+    <%if can? :destroy, inventory%>
+    <div class="inventory__container">
+      <div class="inventories__name-btn">
+        <%= inventory.Name %>
+        <%= button_to "Remove", inventory, method: :delete %>
+      </div>
+      <p class= "inventories__description">Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero ipsa incidunt aliquam eligendi autem similique facere fuga eos voluptate. Officiis error, quo neque ut repellat porro voluptate possimus sapiente impedit.</p>
+      <p>
+        <%= link_to "Show", inventory %>
+      </p>
+    </div>
+    <%end %>
+    <% end %>
+    <%= link_to "New inventory", new_inventory_path, { class: "food_btn"} %>
+  </div>
+</div>
+

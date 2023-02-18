@@ -1,4 +1,4 @@
-class ApplicationMailer < ActionMailer::Base
-  default from: "from@example.com"
-  layout "mailer"
+class ApplicationMailer < ActionMailer::Base.delivery_method = :test
+  default from: 'from@example.com'
+  layout 'mailer'
 end

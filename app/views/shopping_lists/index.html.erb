@@ -1,0 +1,32 @@
+<div class="shopping-list-mother-div recipes-container">
+  <h1>Shopping lists</h1>
+  <section>
+      <% hash = ShoppingList.total_amount(@recipe_foods, @inventory_foods) %>
+      <div class="shopping-list-top-div">
+        <section>
+          <strong>Amount of food to buy: <%= hash[:recipe_food_values_count] %> </strong>
+          <strong>Total value of food needed: $<%= hash[:total_amount] %></strong>
+        </section>
+        <section>
+          <strong>Recipe: <%= @recipe_name.name %></strong>
+          <strong>Inventory: <%= @inventory_name.Name %></strong>
+        </section>
+      </div>
+      <div class="shopping-list-table-div">
+        <table>
+          <tr>
+            <th>Food</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <% hash[:recipe_food_values].each do |key| %>
+          <tr>
+            <td><%= key[:name] %></td>
+            <td><%= key[:quantity] %></td>
+            <td><%= key[:value] %></td>
+          <tr>
+        <%end%>
+        </table>
+      </div>
+  </section>
+</div>

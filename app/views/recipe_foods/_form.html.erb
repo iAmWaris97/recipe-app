@@ -1,0 +1,44 @@
+<%= form_with(model: recipe_food) do |form| %>
+  <% if recipe_food.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
+
+      <ul>
+        <% recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+  <%arr = []%>
+  <%dropdown_recipes.each do |recipe|%>
+    
+    <%arr<<[recipe.name, recipe.id] if can? :destroy, recipe%>
+  <%end%>
+  <h2>Recipe</h2>
+  <%= form.select :recipe_id, arr %>
+
+  </div>
+
+  <div class="field">
+  <h2>Food</h2>
+  <%arr = []%>
+  <%dropdown_foods.each do |food|%>
+    
+    <%arr<<[food.name, food.id]%>
+  <%end%>
+    <%= form.select :food_id, arr %>
+  </div>
+
+
+  <div>
+    <%= form.submit "Add recipe food", class: "logInBtn" %>
+  </div>
+<% end %>

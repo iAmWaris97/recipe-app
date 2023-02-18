@@ -1,0 +1,46 @@
+<div class="recipes-container">
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @recipe %> 
+  <div class="list_btn act-btns">
+    <div>
+      <button class="gen_shopping_btn recipe_btn">Generate shopping list</button>
+      <%if can? :destroy, @recipe%>
+      <button class="recipe_btn"><%= link_to "Add ingredient", new_recipe_food_path %></button>
+      <%end%>
+    </div>
+    <div class="back-forward">
+      <% if can? :update, @recipe %>
+      <button class="recipe_btn"><%= link_to "Edit this recipe", edit_recipe_path(@recipe) %></button>
+      <% end %>
+      <button class="recipe_btn"><%= link_to "Back to recipes", recipes_path %></button>
+    </div>
+    <ul>
+      <%@recipe.recipe_foods.each do |food|%>
+      <%= render food if food != nil %>
+      <%end%>
+    </ul>
+  </div>
+</div>
+
+<section class="modal_shopping">
+  <div class="modal-content">
+    <button class="shopping_close_btn">X</button>
+    <h1>Generating Shopping List:</h1>
+    <p>Choose an inventory to use:</p>
+    <%= render 'shopping_list'%>
+  </div>
+</section>
+
+<script>
+
+  document.querySelector('.gen_shopping_btn').addEventListener('click', (event) => {
+    document.querySelector('.modal_shopping').style.visibility = 'visible'
+    document.querySelector('#body').style.overflow = 'hidden'
+  })
+
+  document.querySelector('.shopping_close_btn').addEventListener('click', (event) => {
+    document.querySelector('.modal_shopping').style.visibility = 'hidden'
+    document.querySelector('#body').style.overflow = 'scroll'
+  })
+</script>

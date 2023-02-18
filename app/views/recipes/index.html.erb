@@ -1,0 +1,30 @@
+<div class="recipes-container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Recipes List</h1>
+  <div id="recipes">
+    <% @recipes.each do |recipe| %>
+    <% if can? :destroy, recipe %>
+    <div class="recipes-title">
+      <h2 class="recipe_name"><%= recipe.name %></h2>
+    </div>
+
+    <div class="recipes-features">
+      <p class="recipe_desc">
+        <strong>Description:</strong>
+        <%= recipe.description %>
+      </p> 
+    
+      <div class="list_btn">
+        <div class="remove_btn btn"><%= button_to "Delete", recipe, method: :delete %></div>
+        <button type="button" class="details btn"><%= link_to "Details", recipe %> </button>
+      </div>
+    </div>
+      <%end%>
+    <% end %>
+  </div>
+
+  <div class="list_btn">
+    <button class="recipe_btn"><%= link_to "New recipe", new_recipe_path %></button>
+  </div>
+</div>

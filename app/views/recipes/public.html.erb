@@ -1,0 +1,15 @@
+<div class=recipes-container>
+<h1>Public Recipes</h1>
+<%@public_recipes.each do |public_recipe|%>
+<div>
+  <h2><%= public_recipe.name %></h2>
+
+  <strong>Total food items:<%=public_recipe.recipe_foods.length%></strong>
+  <%sum=public_recipe.recipe_foods.reduce(0) { |sum, recipe_food| sum + recipe_food.food.price.to_s.to_d*recipe_food.quantity.to_s.to_d }%>
+  <strong>Total price:<%=sum%></strong>
+</div>
+
+<strong>By: <%= public_recipe.user.name %></strong> 
+<button type="button" class="details"><%= link_to "Recipe details", public_recipe %> </button>
+<%end%>
+</div>

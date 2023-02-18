@@ -1,0 +1,23 @@
+<div id="<%= dom_id recipe_food %>">
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Value</th>
+        <th>Actions</th>
+      </tr> 
+      <tr>
+        <td><%= recipe_food.food.name %></td>
+        <td><%= recipe_food.quantity %><%= recipe_food.food.measurement_unit %></td>
+        <td><%="$"%><%= recipe_food.food.price.to_s.to_d*recipe_food.quantity.to_s.to_d %></td>
+        <td class="f-act">
+          <%if can? :destroy, recipe_food.recipe%>
+          <button class="recipe_btn"><%= link_to "Modify", edit_recipe_food_path(id: recipe_food) %></button>
+          <%= button_to "Remove", recipe_food, method: :delete %>
+          <%end%>
+        </td>
+      </tr>
+    </thead>
+  </table>
+</div>

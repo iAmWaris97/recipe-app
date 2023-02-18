@@ -1,0 +1,21 @@
+<div id="<%= dom_id recipe %>">
+  <h1>  
+    <%= recipe.name %>
+  </h1>
+
+  <div class="recipes-features">
+
+    <strong>Preparation time: <%= recipe.preparation_time %> hours</strong>
+    <strong>Cooking time: <%= recipe.cooking_time %> hours</strong>    
+    <strong>Steps to make this recipe</strong>
+    
+    <p>
+      <%= recipe.description %>
+    </p>
+
+    <p class="if-public">
+      <strong>Public: <%= recipe.public %></strong>
+   </p>
+  </div>
+
+</div>
