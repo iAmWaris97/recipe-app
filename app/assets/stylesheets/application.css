@@ -359,3 +359,31 @@ hr.new1 {
   max-width: 85vw;
   margin: 2rem 15%;
 }
+
+.list {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--grey);
+}
+
+.list .list_food {
+  padding: 2rem 1rem;
+}
+
+.list .title {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.list_food_btn {
+  background-color: var(--red);
+  border: none;
+  padding: 2px 2px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 1.5rem;
+  width: 19px;
+  cursor: pointer;
+}
