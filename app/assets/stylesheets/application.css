@@ -347,7 +347,7 @@ tr.t-data:nth-child(even) {
 }
 
 tr.t-data:nth-child(odd) {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 tr {
