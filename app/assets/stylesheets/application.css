@@ -359,3 +359,52 @@ hr.new1 {
   max-width: 85vw;
   margin: 2rem 15%;
 }
+
+.list {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--grey);
+}
+
+.list .list_food {
+  padding: 2rem 1rem;
+}
+
+.list .title {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.list_food_btn {
+  background-color: var(--red);
+  border: none;
+  padding: 2px 2px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-radius: 1.5rem;
+  width: 19px;
+  cursor: pointer;
+}
+
+.back_food {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.back_food a,
+#inventories a {
+  background-color: var(--blue);
+  padding: 5px 14px;
+  color: var(--white);
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.back_food .food_btn:hover {
+  box-shadow: 3px 3px 4px 1px #0e0e0e9e;
+}

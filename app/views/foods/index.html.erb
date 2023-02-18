@@ -1,12 +1,19 @@
-<p style="color: green"><%= notice %></p>
+<div class="recipes-container">
+  <p style="color: green"><%= notice %></p>
+  <h1>Foods</h1>
 
-<h1>Foods</h1>
-<%= link_to "Add food", new_food_path %>
-<div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
-  <% end %>
+  <div id="foods">
+    <div class="list">
+      <div class="list_food name title">Food</div>
+      <div class="list_food title">Measurement Unit</div>
+      <div class="list_food title">Unit Price</div>
+      <div class="list_food title"></div>
+    </div>
+    <% @foods.each do |food| %>
+      <%= render food %>
+    <% end %>
+  </div>
+  <div class="list_btn">
+    <button class="recipe_btn"><%= link_to "New food", new_food_path %>
+  </div>
 </div>
